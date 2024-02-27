@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Buddhabrot Renderer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body bgcolor=#222>
+<div>
+<span style=
+'font-size:25px'>Buddhabrot Renderer</span>
+<br>
+<br>Settings
+<br><input id=input_iterations value=1000 type=number min=10 max=1e4> Max Iterations
+<br><input id=input_alpha value=50 type=number min=1 max=255> Brightness
+<br><input id=input_width value=1920 type=number min=64 max=1024*16> Canvas Width
+<br><input id=input_height value=1080 type=number min=64 max=1024*16> Canvas Height
+<br><input id=input_scale value=.45 type=number min=0 max=1e3> Scale
+<br><input id=input_updateRate oninput="updateRate=parseInt(input_updateRate.value);" value=100 type=number min=1 max=1e3> Update Speed
+<br>
+<br>Fractal Type
+<br><input name=input_fractalType value=0 type=radio class=input_box> Buddhabrot
+<br><input name=input_fractalType value=1 type=radio class=input_box checked> Anti-Buddhabrot
+<br>
+<br><input id=checkbox_useSymmetry type=checkbox class=input_box checked>Make Symmetric
+<br><input id=checkbox_greyScale type=checkbox class=input_box>Greyscale
+<br><input id=checkbox_rotate type=checkbox class=input_box>Rotate
+<br>
+<br><button onclick=Screenshot()>Save</button>
+<button onclick=Reset()>Restart</button>
+<br><br>Load <input id=imageFileInput style='width:300px;'type="file" accept="image/*">
+</div>
+<center>
+<canvas id=canvas></canvas>
+</center>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

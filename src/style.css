@@ -1,0 +1,27 @@
+body
+{
+    overflow:hidden;
+    color:#FFF;
+    margin:0;
+}
+div
+{
+    position:absolute;
+    text-align:left;
+    left:10px;
+    top:10px;
+}
+input
+{
+    width:100px;
+    margin:5px;
+}
+input.input_box
+{
+    width:20px; 
+    height:20px;
+}
+*
+{
+    font-size:20px;
+}
